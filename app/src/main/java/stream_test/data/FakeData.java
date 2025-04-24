@@ -17,7 +17,7 @@ public class FakeData {
     
     public static List<Doacao> getFakeDoacoes() {
         ArrayList<Doacao> doacoes = new ArrayList<>();
-        doacoes.add(new Doacao(new Pessoa("João", "5199123456", "Rua Ados Bobos, nº 0"), new Alimento(10)));
+        doacoes.add(new Doacao(new Pessoa("João", "5199123456", "Rua Ados Bobos, nº 0"), new Alimento(50)));
         doacoes.add(new Doacao(new Pessoa("Maria", "5199123456", "Rua Ados Bobos, nº 0"), new Alimento(20)));
         doacoes.add(new Doacao(new Pessoa("José", "5199123456", "Rua Ados Bobos, nº 0"), new Alimento(30)));
         doacoes.add(new Doacao(new Pessoa("Ana", "5199123456", "Rua Ados Bobos, nº 0"), new MaterialLimpeza(40)));

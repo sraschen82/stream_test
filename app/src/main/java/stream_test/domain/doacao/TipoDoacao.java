@@ -1,5 +1,6 @@
 package stream_test.domain.doacao;
 
+
 public abstract class TipoDoacao {
     private int quantidade;
 

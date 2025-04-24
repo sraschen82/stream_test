@@ -16,26 +16,40 @@ public class OptionalTest {
       
      
         // Optional<Integer> numero = Optional.of(10);
-        Optional<Integer> numero = Optional.ofNullable(7);
-
-             
-        
+        // Optional<Integer> numero = Optional.ofNullable(null);
        
        
-        System.out.println("Valor Optional: " + numero);
-        // System.out.println("Valor Integer: " + numero.get());
-        System.out.println("Valor ou 5: " + numero.orElse(0));
-        System.out.println("Há valor? " + numero.isPresent());
-        System.out.println("Valor é vazio?: " + numero.isEmpty());
-        System.out.println("Valor se >5 ou então 0: " + numero.filter(n -> n > 5).orElse(0));
-        System.out.println("Valor se <5 ou então 1: " + numero.filter(n -> n < 5).orElse(1));
-        System.out.println("Valor + 1 ou 0: " + numero.map(n -> n +1).orElse(0));
-        System.out.println("Valor multiplicado por 2 ou 1: " + numero.map(n -> n * 2).orElseGet(() -> 1));
-        System.out.println("Valor dividido por dois: " + numero.map(n -> n /2).orElseThrow(() -> new IllegalArgumentException("Não foi possível dividir por 2")));
+       
+        // System.out.println("Valor Optional: " + numero);
+        // // System.out.println("Valor Integer: " + numero.get());
+        // System.out.println("Valor ou 8: " + numero.orElse(8));
+        // System.out.println("Há valor? " + numero.isPresent());
+        // System.out.println("Valor é vazio?: " + numero.isEmpty());
+        // System.out.println("Valor se >5 ou então 0: " + numero.filter(n -> n > 5).orElse(0));
+        // System.out.println("Valor se <5 ou então 1: " + numero.filter(n -> n < 5).orElse(1));
+        // System.out.println("Valor + 1 ou 0: " + numero.map(n -> n +1).orElse(0));
+        // System.out.println("Valor multiplicado por 2 ou 1: " + numero.map(n -> n * 2).orElseGet(() -> 1));
+        // System.out.println("Valor dividido por dois: " + numero.map(n -> n /2).orElseThrow(() -> new IllegalArgumentException("Não foi possível dividir por 2")));
        
         // Optional<List<Integer>> lista = Optional.of(List.of(1, 2, 3, 4, 5,5,4,3,2,1));
         
-        // Optional<List<Integer>> lista = Optional.empty();
+        Optional<List<Integer>> lista = Optional.empty();
+
+        // lista.ifPresent(action -> {
+        //     action.stream()
+        //             .distinct()
+        //             .filter(n -> n % 2 == 0)
+        //             .forEach(System.out::println);
+        //    });
+
+        lista.ifPresentOrElse(System.out::println, () -> System.out.println("Lista vazia"));
+        // lista.ifPresentOrElse((n) -> System.out.println(n), () -> System.out.println("Lista vazia"));
+
+        
+          
+         
+        
+
        
         // System.out.println("Lista: " + lista);
         // System.out.println("Tamanho: " + lista.get().parallelStream().count());
@@ -47,7 +61,7 @@ public class OptionalTest {
         // System.out.println("Último: " + lista.get().getLast());
         // System.out.println("Valor: " + lista.isPresent());
         // System.out.println("Valor: " + lista.isEmpty());
-        // System.out.println("Soma: " + lista.get().parallelStream()
+        // System.out.println("Soma: " + lista.get().stream()
         //            .reduce(0, (a,b) -> a+b));
         // System.out.println("Soma dos distintos: " + lista.get().parallelStream()
         //            .distinct()
@@ -55,7 +69,14 @@ public class OptionalTest {
         // System.out.println("Soma dos distintos: " + lista.get().parallelStream()
         //            .distinct()
         //            .filter(n -> n % 2 == 0)
+                   
         //            .collect(Collectors.toList()));
+
+
+      
+                   
+                   
+                     
 
 
         // System.out.println("Valor: " + lista.filter(n -> n < 5).orElse(List.of()));
