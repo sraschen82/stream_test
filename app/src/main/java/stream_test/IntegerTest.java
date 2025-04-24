@@ -7,11 +7,15 @@ public class IntegerTest {
         // Isso é útil quando você precisa usar números inteiros em coleções, como listas ou mapas
         // Além disso, a classe Integer fornece métodos úteis para manipular números inteiros
 
-
+         
+          
+       
 
         Integer i = 10;
         Integer j = 5;
 
+        
+        System.out.println(i); 
         System.out.println(i.doubleValue()); // 10.0, porque o valor double
         System.out.println(i.intValue()); // 10, porque o valor int
         System.out.println(i.toString().charAt(0)); // 1, porque é o primeiro caractere da string "10"

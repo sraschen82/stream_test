@@ -15,13 +15,16 @@ public class OptionalTest {
     public static void main(String[] args) {
       
      
-        Optional<Integer> numero = Optional.of(10);
-        // Optional<Integer> numero = Optional.ofNullable(null);
+        // Optional<Integer> numero = Optional.of(10);
+        Optional<Integer> numero = Optional.ofNullable(7);
+
+             
+        
        
        
         System.out.println("Valor Optional: " + numero);
         // System.out.println("Valor Integer: " + numero.get());
-        System.out.println("Valor ou 5: " + numero.orElse(5));
+        System.out.println("Valor ou 5: " + numero.orElse(0));
         System.out.println("Há valor? " + numero.isPresent());
         System.out.println("Valor é vazio?: " + numero.isEmpty());
         System.out.println("Valor se >5 ou então 0: " + numero.filter(n -> n > 5).orElse(0));
